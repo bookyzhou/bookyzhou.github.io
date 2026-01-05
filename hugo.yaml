@@ -42,21 +42,25 @@ pagination:
 menu:
   main:
     - name: 首页  # 首页
-      weight: 10
+      weight: 1
       identifier: home
       url: /
-    - name: 归档  # 归档页（显示所有文章列表）
-      weight: 20
-      identifier: archives
-      url: /post/
-    - name: 标签  # 标签页
-      weight: 30
-      identifier: tags
-      url: /tags/
+    - name: 搜索  # 搜索页
+      weight: 2
+      identifier: search
+      url: /search/
     - name: 分类  # 分类页
-      weight: 40
+      weight: 3
       identifier: categories
       url: /categories/
+    - name: 归档  # 归档页
+      weight: 4
+      identifier: archives
+      url: /archive/
+    - name: 关于  # 关于页
+      weight: 5
+      identifier: about-me
+      url: /about-me
 
 # ===========================================================================
 # 主题参数配置（params）
@@ -120,3 +124,9 @@ markup:
   goldmark:
     renderer:
       unsafe: true  # 允许在 Markdown 中使用原始 HTML
+
+# ===========================================================================
+# 输出格式配置
+# ===========================================================================
+outputs:
+  home: ["HTML", "RSS", "JSON"]
