@@ -1,0 +1,60 @@
+{{- define "title" }}{{ .Title }} - {{ .Site.Title }}{{ end -}}
+
+{{- define "content" }}
+
+{{- if .Content }}
+<div class="section-content" style="margin-bottom: 40px;">
+    <h1 style="font-size: 28px; margin-bottom: 10px;">{{ .Title }}</h1>
+    <div style="color: #666; font-size: 16px; line-height: 1.8;">
+        {{ .Content }}
+    </div>
+</div>
+{{- end }}
+
+{{- $paginator := .Paginate .Data.Pages.ByDate.Reverse .Site.Params.archivePaginate }}
+<section id="archive" class="archive">
+  {{- if and (not $paginator.HasPrev) .Site.Params.showArchiveCount }}
+    <div class="archive-title">
+      <span class="archive-post-counter">
+        {{ T "archiveCounter" (len .Data.Pages) }}
+      </span>
+    </div>
+  {{- end -}}
+
+  {{- range $index, $element := $paginator.Pages -}}
+    {{- $thisYear := $element.Date.Format "2006" }}
+    {{- $lastElement := $index | add -1 | index $paginator.Pages }}
+    {{- if or (eq $index 0) ( ne ($lastElement.Date.Format "2006") $thisYear ) }}
+      <div class="collection-title">
+        <h2 class="archive-year">{{ $thisYear }}</h2>
+      </div>
+    {{- end }}
+
+    <div class="archive-post">
+      <span class="archive-post-time">
+        {{ $element.Date.Format "01-02" }}
+      </span>
+      <span class="archive-post-title">
+        <a href="{{ $element.RelPermalink }}" class="archive-post-link">
+          {{ .Title }}
+        </a>
+      </span>
+    </div>
+  {{- end -}}
+</section>
+<!-- pagination -->
+<nav class="pagination">
+  {{ with $paginator.Prev -}}
+    <a class="prev" href="{{ .URL }}">
+      <i class="iconfont icon-left"></i>
+      <span class="prev-text">{{ T "prevPage" }}</span>
+    </a>
+  {{- end }}
+  {{ with $paginator.Next -}}
+    <a class="next" href="{{ .URL }}">
+      <span class="next-text">{{ T "nextPage" }}</span>
+      <i class="iconfont icon-right"></i>
+    </a>
+  {{- end }}
+</nav>
+{{- end }}

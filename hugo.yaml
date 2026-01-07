@@ -1,37 +1,37 @@
 # ===========================================================================
 # 基础站点配置
 # ===========================================================================
-title: bookyzhou 的个人博客  # 浏览器标签页站点标题
-baseURL: https://bookyzhou.github.io/  # 站点的基础 URL（部署后的网址）
-copyright: "bookyzhou 的个人博客"  # 版权声明
+title: bookyzhou 的个人博客 # 浏览器标签页站点标题
+baseURL: https://bookyzhou.github.io/ # 站点的基础 URL（部署后的网址）
+copyright: "bookyzhou 的个人博客" # 版权声明
 
 # ===========================================================================
 # 语言配置
 # ===========================================================================
-languageCode: zh-cn  # 站点语言代码
-defaultContentLanguage: zh-cn  # 默认内容语言
-hasCJKLanguage: true  # 是否包含中日韩文字（影响字数统计）
+languageCode: zh-cn # 站点语言代码
+defaultContentLanguage: zh-cn # 默认内容语言
+hasCJKLanguage: true # 是否包含中日韩文字（影响字数统计）
 
 # ===========================================================================
 # 主题与功能开关
 # ===========================================================================
-theme: even  # 使用的主题名称
-enableEmoji: true  # 启用 Emoji 表情支持
-enableGitInfo: false  # 使用 Git 提交记录生成最后修改时间
+theme: even # 使用的主题名称
+enableEmoji: true # 启用 Emoji 表情支持
+enableGitInfo: false # 使用 Git 提交记录生成最后修改时间
 
 # ===========================================================================
 # 代码高亮配置
 # ===========================================================================
-pygmentsOptions: "linenos=table"  # 代码行号显示方式
-pygmentsCodefences: true  # 启用代码围栏语法高亮
-pygmentsUseClasses: true  # 使用 CSS 类进行高亮（而非内联样式）
-pygmentsCodefencesGuessSyntax: true  # 自动猜测代码语言
+pygmentsOptions: "linenos=table" # 代码行号显示方式
+pygmentsCodefences: true # 启用代码围栏语法高亮
+pygmentsUseClasses: true # 使用 CSS 类进行高亮（而非内联样式）
+pygmentsCodefencesGuessSyntax: true # 自动猜测代码语言
 
 # ===========================================================================
 # 分页配置
 # ===========================================================================
 pagination:
-  pagerSize: 5  # 首页每页显示的文章数量
+  pagerSize: 5 # 首页每页显示的文章数量
 
 # ===========================================================================
 # 导航菜单配置
@@ -41,26 +41,34 @@ pagination:
 # url: 点击后跳转的链接
 menu:
   main:
-    - name: 首页  # 首页
+    - name: 首页 # 首页
       weight: 1
       identifier: home
       url: /
-    - name: 搜索  # 搜索页
+    - name: 随笔 # 随笔页
       weight: 2
+      identifier: thoughts
+      url: /thoughts/
+    - name: 编程 # 归档页
+      weight: 3
+      identifier: coding
+      url: /coding/
+    - name: 游戏 # 归档页
+      weight: 4
+      identifier: game
+      url: /game/
+    - name: 友链  # 归档页
+      weight: 5
+      identifier: links
+      url: /links
+    - name: 关于 # 关于页
+      weight: 6
+      identifier: about
+      url: /about
+    - name: 搜索 # 搜索页
+      weight: 7
       identifier: search
       url: /search/
-    - name: 分类  # 分类页
-      weight: 3
-      identifier: categories
-      url: /categories/
-    - name: 归档  # 归档页
-      weight: 4
-      identifier: archives
-      url: /archive/
-    - name: 关于  # 关于页
-      weight: 5
-      identifier: about-me
-      url: /about-me
 
 # ===========================================================================
 # 主题参数配置（params）
@@ -71,44 +79,44 @@ params:
   # ---------------------------------------------------------------------------
   # 站点基本信息
   # ---------------------------------------------------------------------------
-  version: "4.x"  # 主题版本
-  since: "2026"  # 站点建立年份，显示在页脚
-  gitRepo: "https://github.com/bookyzhou/bookyzhou.github.io"  # Git 仓库地址
-  logoTitle: "Bookyzhou's Blog"  # Logo 标题，显示在网站左上角
-  description: "bookyzhou's personal blog"  # SEO 描述
+  version: "4.x" # 主题版本
+  since: "2026" # 站点建立年份，显示在页脚
+  gitRepo: "https://github.com/bookyzhou/bookyzhou.github.io" # Git 仓库地址
+  logoTitle: "Bookyzhou's Blog" # Logo 标题，显示在网站左上角
+  description: "bookyzhou's personal blog" # SEO 描述
 
   # ---------------------------------------------------------------------------
   # 归档与日期显示
   # ---------------------------------------------------------------------------
-  archivePaginate: 50  # 归档、标签、分类每页显示的文章数目
-  showArchiveCount: true  # 是否在归档页显示文章总数
-  dateFormatToUse: "2006-01-02"  # 日期格式
+  archivePaginate: 50 # 归档、标签、分类每页显示的文章数目
+  showArchiveCount: true # 是否在归档页显示文章总数
+  dateFormatToUse: "2006-01-02" # 日期格式
 
   # ---------------------------------------------------------------------------
   # 文章页面配置
   # ---------------------------------------------------------------------------
-  moreMeta: true  # 文章是否显示字数统计与阅读时间
-  toc: true  # 是否在文章页显示目录
-  autoCollapseToc: false  # 目录自动展开/折叠
-  fancybox: true  # Fancybox 图片查看器
-  postMetaInFooter: true  # 是否在文章页脚显示元信息（作者、最后修改时间等）
+  moreMeta: true # 文章是否显示字数统计与阅读时间
+  toc: true # 是否在文章页显示目录
+  autoCollapseToc: false # 目录自动展开/折叠
+  fancybox: true # Fancybox 图片查看器
+  postMetaInFooter: true # 是否在文章页脚显示元信息（作者、最后修改时间等）
 
   # ---------------------------------------------------------------------------
   # MathJax 数学公式配置
   # ---------------------------------------------------------------------------
-  mathjax: false  # 是否启用 MathJax
-  mathjaxEnableSingleDollar: false  # 是否允许使用 $...$ 进行行内公式渲染
-  mathjaxEnableAutoNumber: false  # 是否启用公式自动编号
-  mathjaxUseLocalFiles: false  # 是否使用本地 static/lib/mathjax 文件
+  mathjax: false # 是否启用 MathJax
+  mathjaxEnableSingleDollar: false # 是否允许使用 $...$ 进行行内公式渲染
+  mathjaxEnableAutoNumber: false # 是否启用公式自动编号
+  mathjaxUseLocalFiles: false # 是否使用本地 static/lib/mathjax 文件
 
   # ---------------------------------------------------------------------------
   # 社交链接配置
   # ---------------------------------------------------------------------------
   social:
-    a-email: "mailto:zhouyiheng@mail.ustc.edu.cn"  # 邮箱
-    g-github: "https://github.com/bookyzhou"  # GitHub
-    i-zhihu: "https://www.zhihu.com/people/zhou-yi-heng-88-37"  # 知乎
-    o-bilibili: "https://space.bilibili.com/629603804?spm_id_from=333.1007.0.0"  # Bilibili
+    a-email: "mailto:zhouyiheng@mail.ustc.edu.cn" # 邮箱
+    g-github: "https://github.com/bookyzhou" # GitHub
+    i-zhihu: "https://www.zhihu.com/people/zhou-yi-heng-88-37" # 知乎
+    o-bilibili: "https://space.bilibili.com/629603804?spm_id_from=333.1007.0.0" # Bilibili
 
 # ===========================================================================
 # Markup 渲染配置
@@ -118,14 +126,14 @@ markup:
   # 目录（Table of Contents）配置
   # ---------------------------------------------------------------------------
   tableOfContents:
-    startLevel: 1  # 目录起始标题级别（1 = h1，2 = h2）
+    startLevel: 1 # 目录起始标题级别（1 = h1，2 = h2）
 
   # ---------------------------------------------------------------------------
   # Goldmark 渲染器配置
   # ---------------------------------------------------------------------------
   goldmark:
     renderer:
-      unsafe: true  # 允许在 Markdown 中使用原始 HTML
+      unsafe: true # 允许在 Markdown 中使用原始 HTML
 
 # ===========================================================================
 # 输出格式配置
