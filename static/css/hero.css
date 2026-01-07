@@ -1,9 +1,8 @@
 .hero-section {
   text-align: center;
-  padding: 60px 20px;
-  background-color: #f9f9f9; /* Light background */
+  padding: 100px 20px; /* Increased padding for more space */
+  background-color: transparent; /* Removed background color */
   margin-bottom: 40px;
-  border-radius: 8px;
 }
 
 .hero-avatar .avatar-img {
@@ -11,21 +10,31 @@
   height: 120px;
   border-radius: 50%;
   object-fit: cover;
-  border: 4px solid #fff;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  margin-bottom: 20px;
+  /* border: 4px solid #fff; Removed border */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Softer shadow */
+  margin-bottom: 30px; /* Increased margin */
 }
 
-.hero-title {
-  font-size: 2.5em;
-  margin-bottom: 10px;
+.hero-title-static {
+  font-size: 3.5em; /* Larger font */
+  font-weight: bold;
+  margin-bottom: 15px;
   color: #333;
+  line-height: 1.2;
+}
+
+.hero-typewriter {
+  font-size: 2.5em;
+  margin-top: 20px;
+  color: #333;
+  font-family: "Georgia", serif; /* Elegant font for the quote */
+  min-height: 1.2em; /* Reserve space */
 }
 
 .hero-subtitle {
-  font-size: 1.2em;
+  font-size: 1.3em; /* Slightly larger font */
   color: #666;
-  min-height: 1.5em; /* Reserve space for typewriter */
+  margin-bottom: 30px; /* Increased margin */
 }
 
 /* Cursor effect */

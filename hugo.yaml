@@ -99,7 +99,6 @@ params:
   toc: true # 是否在文章页显示目录
   autoCollapseToc: false # 目录自动展开/折叠
   fancybox: true # Fancybox 图片查看器
-  postMetaInFooter: true # 是否在文章页脚显示元信息（作者、最后修改时间等）
 
   # ---------------------------------------------------------------------------
   # MathJax 数学公式配置

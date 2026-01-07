@@ -2,12 +2,6 @@
 title: "Python Black 格式化工具配置指南"
 date: 2026-01-04T16:58:05+08:00
 lastmod: 2026-01-04T16:58:05+08:00
-tags:
-  - Python
-  - Black
-  - 代码格式化
-categories:
-  - Python开发
 author: "bookyzhou"
 ---
 
