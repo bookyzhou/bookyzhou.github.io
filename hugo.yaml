@@ -7,7 +7,8 @@ copyright: "bookyzhou 的个人博客"          # 版权声明（显示在页脚
 theme: hugo-theme-stack                    # 使用的 Hugo 主题名称
 languageCode: zh-cn                        # 站点语言代码
 DefaultContentLanguage: zh-cn              # 默认内容语言
-hasCJKLanguage: false                      # 是否包含中日韩文字（影响字数统计和摘要生成）
+hasCJKLanguage: true                       # 是否包含中日韩文字（影响字数统计和摘要生成）
+timeZone: Asia/Shanghai                    # 设置时区为上海时间（UTC+8）
 
 # ===========================================================================
 # 分页配置
