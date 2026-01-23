@@ -3,7 +3,7 @@ title: 友链
 slug: "links"
 links:
   - title: 西瓜地上的小英雄
-    description: AI Infra 大佬，热衷于学习技术，喜欢通过代码创造价值
+    description: AI Infra 大佬，热衷于学习技术，通过代码创造价值
     website: https://www.zhouxin.space/
     image: img/zhouxin.png
   - title: CHENszu
