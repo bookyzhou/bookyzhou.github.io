@@ -15,10 +15,12 @@ tags:
 在安装 Hugo 之前，请确保你的系统已安装以下两款核心工具：[Git](https://git-scm.com/) 和 [Go](https://go.dev/)。Git 主要用于主题管理以及部署工作，而 Go 则是 Hugo 构建和模块管理的基础。
 
 你可以通过在终端运行以下命令来验证它们是否已安装，并检查版本：
+
 ```bash
 git --version
 go version
 ```
+
 如果命令能正确返回版本信息，说明你已经准备就绪！
 
 ## 安装 Hugo
@@ -26,17 +28,21 @@ go version
 为了让大家少走弯路，这里我将重点介绍安装 Hugo 的关键步骤。如果你需要更详细或针对特定操作系统的安装说明，建议参考[Hugo 官方文档](https://gohugo.io/installation/)，那里有最权威、最完整的安装流程。
 
 以 Linux 系统为例，使用 Snap 包管理器进行安装，在 Linux 终端中执行以下命令：
+
 ```bash
 sudo snap install hugo --channel=extended/stable
 ```
+
 **小提示：** Hugo 提供了标准版和扩展版两个版本。扩展版内置了 LibSass 转译器，能够将 Sass 语言转换为 CSS。很多现代 Hugo 主题都会用到这一功能，为了确保主题兼容性和丰富的功能体验，请确保你安装的是扩展版。
 
 安装完成后，你可以通过运行以下命令来检查 Hugo 的版本：
+
 ```bash
 hugo version
 ```
 
 如果一切顺利，你应该会看到类似下面的输出（版本号可能不同，需要确认 `extended` 关键词）：
+
 ```bash
 hugo v0.152.2-6abdacad3f3fe944ea42177844469139e81feda6+extended linux/amd64 BuildDate=2025-10-24T15:31:49Z VendorInfo=snap:0.152.2
 ```
@@ -48,12 +54,14 @@ hugo v0.152.2-6abdacad3f3fe944ea42177844469139e81feda6+extended linux/amd64 Buil
 ### 新建项目
 
 首先，在你的终端中输入以下命令，创建一个全新的 Hugo 站点项目：
+
 ```bash
 hugo new site <你的站点名称> --format yaml
 ```
 
 将 `<你的站点名称>` 替换为你希望的项目文件夹名，例如 `my-blog`。运行后，Hugo 会自动创建一个同名文件夹，其中包含了博客的基本目录结构：
-```
+
+```txt
 .
 ├── archetypes      # 文章模板存放地
 ├── assets          # 全局资源文件（可进行管道处理）
@@ -75,21 +83,25 @@ Hugo 拥有一个庞大而活跃的主题社区。你可以访问 [Hugo Themes](
 这里，博主将以自己使用的 [Stack](https://github.com/CaiJimmy/hugo-theme-stack) 主题为例，演示如何通过 `git submodule` 的方式进行安装：
 
 首先，进入你刚创建的站点目录：
+
 ```bash
 cd <你的站点名称>
 ```
 
 如果你的项目目录还不是一个 Git 仓库，需要先进行初始化：
+
 ```bash
 git init
 ```
 
 然后，使用 `git submodule` 命令将 Stack 主题添加到 `themes` 文件夹中：
+
 ```bash
 git submodule add --depth=1 https://github.com/CaiJimmy/hugo-theme-stack/ themes/hugo-theme-stack
 ```
 
 最后，在你的站点根目录下的 `hugo.yaml` 配置文件中，指定你希望使用的主题：
+
 ```yaml
 # hugo.yaml
 theme: 'hugo-theme-stack'
@@ -102,14 +114,17 @@ theme: 'hugo-theme-stack'
 在正式构建和发布站点之前，为了更直观地了解和配置主题，我们可以先使用 Stack 主题提供的示例配置文件和内容。这样做的好处是能够立即看到各种配置项的效果，后续根据自己的需求进行修改时也会方便很多。
 
 依然在你的站点根目录中，执行以下命令：
+
 ```bash
 cd <你的站点名称>
 cp ./themes/hugo-theme-stack/exampleSite/hugo.yaml ./hugo.yaml
 cp -r ./themes/hugo-theme-stack/exampleSite/content ./
 ```
+
 **小提示：** 第二条命令会将示例内容复制到你的 `content` 文件夹中，如果你已经创建了内容，请注意备份或合并。
 
 现在，是时候构建你的站点了！在项目根目录运行 `hugo` 命令：
+
 ```bash
 hugo
 ```
@@ -119,6 +134,7 @@ hugo
 ### 本地预览网页
 
 构建完成后，我们可以在本地启动一个服务器来预览你的博客。在项目目录执行下方命令：
+
 ```bash
 hugo server
 ```
@@ -132,6 +148,7 @@ hugo server
 ### 创建你的第一篇文章
 
 Hugo 中的文章内容采用 Markdown 格式编写，非常简洁高效。你可以使用以下命令来创建一篇新文章：
+
 ```bash
 hugo new post/my_first_article.md
 ```
@@ -154,7 +171,8 @@ hugo new post/my_first_article.md
 创建好远程仓库后，我们需要将本地的 Hugo 项目链接到这个新创建的 GitHub 仓库。
 
 首先，确保你当前的工作目录是你的 Hugo 站点的根目录。然后，执行以下 Git 命令：
-```
+
+```bash
 # 将本地仓库与远程仓库关联
 git remote add origin https://github.com/<你的用户名>/<你的用户名>.github.io.git
 # 将当前分支重命名为 main (如果默认不是main的话)
@@ -178,12 +196,14 @@ git push --set-upstream origin main
 ![Github Pages Settings](github_pic1.jpg)
 
 ### 新增 GitHub Actions 部署工作流文件
+
 现在，我们来添加一个 GitHub Actions 配置文件。这个文件将定义一个自动化工作流，负责在每次你推送到 `main` 分支时，自动构建你的 Hugo 站点并将其部署到 GitHub Pages。
 
 在你的 Hugo 站点根目录下，创建一个名为 `.github/workflows` 的新文件夹。然后，在这个文件夹中创建一个名为 `hugo.yaml` 的文件。
 
 将以下内容复制粘贴到 **`.github/workflows/hugo.yaml`** 文件中（注意调整 `HUGO_VERSION`）：
-```
+
+```yaml
 name: Deploy Hugo site to Pages
 
 on:
@@ -264,18 +284,20 @@ jobs:
 ```
 
 ### 推送工作流文件并观察部署
+
 保存 `hugo.yaml` 文件后，将其提交并推送到 GitHub：
-```
+
+```bash
 git add .github/workflows/hugo.yaml
 git commit -m "feat: Add GitHub Actions workflow for Hugo deployment"
 git push
 ```
 
-推送成功后，导航到你的 GitHub 仓库的 `Actions` (动作) 标签页。你会看到一个名为 "Deploy Hugo site to Pages" 的工作流正在运行。点击它，你可以查看其执行进度和详细日志。
+推送成功后，导航到你的 GitHub 仓库的 `Actions` 标签页。你会看到一个名为 "Deploy Hugo site to Pages" 的工作流正在运行。点击它，你可以查看其执行进度和详细日志。
 
 ![Github Pages Actions](github_pic2.jpg)
 
-一旦工作流成功完成，通常需要等待几分钟（GitHub Pages 的部署可能有一些延迟），你的博客就应该可以通过 `https://你的用户名.github.io` 访问了！
+工作流完成后，通常需要等待几分钟（GitHub Pages 的部署可能有一些延迟），你的博客就应该可以通过 `https://你的用户名.github.io` 访问了！
 
 ## 参考资料
 
