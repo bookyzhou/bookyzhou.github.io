@@ -4,7 +4,7 @@
 title: 凌思札记 # 浏览器标签页显示的站点标题
 baseURL: https://bookyzhou.github.io/ # 站点的基础 URL（部署后的访问地址）
 copyright: "凛隼的个人博客" # 版权声明（显示在页脚）
-theme: hugo-theme-stack # 使用的 Hugo 主题名称
+theme: 'hugo-theme-stack' # 使用的 Hugo 主题名称
 languageCode: zh-cn # 站点语言代码
 DefaultContentLanguage: zh-cn # 默认内容语言
 hasCJKLanguage: true # 是否包含中日韩文字（影响字数统计和摘要生成）
