@@ -1,8 +1,8 @@
 ---
-title: 基于 Hugo 搭建博客框架
-description: 快速搭建博客基本框架
-date: 2026-01-19
-lastmod: 2026-01-25T01:24:17
+title: Hugo 极速建站指南
+description: 从零搭建个人博客并部署上线
+date: '2026-01-25T01:24:17+08:00'
+lastmod: '2026-01-25T23:40:57+08:00'
 categories: logs
 tags:
     - Hugo
@@ -120,8 +120,6 @@ cd <你的站点名称>
 cp ./themes/hugo-theme-stack/exampleSite/hugo.yaml ./hugo.yaml
 cp -r ./themes/hugo-theme-stack/exampleSite/content ./
 ```
-
-**小提示：** 第二条命令会将示例内容复制到你的 `content` 文件夹中，如果你已经创建了内容，请注意备份。
 
 现在，是时候构建你的站点了！在项目根目录运行 `hugo` 命令：
 
