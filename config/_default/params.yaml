@@ -1,0 +1,60 @@
+# 内容相关配置
+mainSections:    # 在首页列表中显示的内容目录
+- post
+featuredImageField: image    # 文章封面图片的字段名
+rssFullContent: true    # RSS 订阅源是否输出全文内容
+favicon: /favicon/favicon.png    # 浏览器标签页的网站图标
+
+# 页脚配置
+footer:
+  since: 2026    # 网站建立年份（用于版权声明）
+
+# 日期格式配置
+dateFormat:
+  published: 2006 年 1 月 2 日    # 文章发布日期格式
+  lastUpdated: 2006年1月2日 15:04 CST (UTC+8)    # 文章更新日期格式
+
+# 侧边栏配置
+sidebar:
+  subtitle: 振羽击风，自筑锋芒    # 侧边栏副标题
+  avatar:
+    enabled: true    # 是否启用头像
+    local: false    # true: 从 assets 目录读取；false: 使用 src 指定的路径
+    src: /img/avatar.png    # 头像图片路径
+
+# 文章页面配置
+article:
+  math: false    # 是否启用数学公式支持（需配合 KaTeX 或 MathJax）
+  toc: true    # 是否显示文章目录
+  readingTime: true    # 是否显示预计阅读时间
+  license:    # 文章版权声明（显示在文章末尾）
+    enabled: true    # 是否启用版权声明
+    default: Licensed under CC BY-NC-SA 4.0    # 默认版权协议
+
+# 侧边栏小部件配置
+widgets:
+  homepage:    # 首页侧边栏小部件
+  - type: search    # 搜索框
+  - type: archives    # 年份归档列表
+    params:
+      limit: 5    # 显示最近 5 个年份归档
+  - type: categories    # 分类列表
+    params:
+      limit: 10    # 最多显示 10 个分类
+  - type: tag-cloud    # 标签云
+    params:
+      limit: 10    # 最多显示 10 个标签
+  page:    # 文章页侧边栏小部件
+  - type: toc    # 文章目录
+
+# 配色方案配置
+colorScheme:
+  toggle: true    # 是否显示深色/浅色模式切换按钮
+  default: auto    # 默认配色方案（auto: 跟随系统，light: 浅色，dark: 深色）
+
+# 图片处理配置
+imageProcessing:
+  cover:
+    enabled: true    # 是否启用封面图片处理
+  content:
+    enabled: true    # 是否启用内容图片处理

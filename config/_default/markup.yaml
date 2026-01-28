@@ -1,0 +1,32 @@
+# Goldmark 解析器配置（Hugo 默认的 Markdown 解析器）
+goldmark:
+  extensions:    # 扩展功能
+    passthrough:    # 直通模式：允许特定内容不被 Markdown 解析
+      enable: true    # 启用直通模式（用于支持数学公式）
+      delimiters:    # 定义直通内容的分隔符
+        block:    # 块级元素分隔符（独立成段）
+        - - \[    # LaTeX 块级公式：\[ 公式内容 \]
+          - \]
+        - - $$    # 另一种块级公式：$$ 公式内容 $$
+          - $$
+        inline:    # 行内元素分隔符（段落内）
+        - - \(    # LaTeX 行内公式：\( 公式内容 \)
+          - \)
+  renderer:    # 渲染器配置
+    unsafe: true    # 允许在 Markdown 中使用原始 HTML 标签。注意：设为 true 可能有安全风险，但提供更大灵活性
+
+# 目录生成配置
+tableOfContents:
+  startLevel: 2    # 目录起始级别（从 h2 开始，h1 不包含在目录中）
+  endLevel: 4    # 目录结束级别（到 h4 为止）
+  ordered: true    # 使用有序列表（1. 2. 3.）而非无序列表
+
+# 代码高亮配置
+highlight:
+  noClasses: false    # 使用 CSS 类名而非内联样式（需配合 CSS 文件）
+  codeFences: true    # 启用代码围栏语法（```语言名）
+  guessSyntax: true    # 未指定语言时自动猜测代码语言
+  lineNos: true    # 显示代码行号
+  lineNoStart: 1    # 行号起始值
+  lineNumbersInTable: true    # 使用表格布局显示行号（便于复制代码时不复制行号）
+  tabWidth: 4    # Tab 键对应的空格数
