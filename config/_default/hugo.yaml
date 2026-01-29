@@ -1,9 +1,9 @@
-# 基础站点配置
+# 站点基础配置
 title: 凌思札记    # 浏览器标签页显示的站点标题
-baseURL: https://bookyzhou.github.io/    # 站点的基础 URL（部署后的访问地址）
+baseURL: https://bookyzhou.github.io/    # 站点发布后的绝对 URL
 copyright: "凛隼的个人博客"    # 版权声明（显示在页脚）
 theme: 'hugo-theme-stack'    # 使用的 Hugo 主题名称
-languageCode: zh-cn    # 站点语言代码
+languageCode: zh-cn    # 站点的语言标签
 DefaultContentLanguage: zh-cn    # 默认内容语言
 hasCJKLanguage: true    # 是否包含中日韩文字（影响字数统计和摘要生成）
 timeZone: Asia/Shanghai    # 设置时区为上海时间（UTC+8）
@@ -20,10 +20,45 @@ permalinks:
 # 相关文章推荐配置
 related:
   includeNewer: true    # 是否推荐比当前文章创建时间更晚的文章
-  threshold: 60    # 相关度阈值（0-100），低于此值的文章不会被推荐
-  toLower: false    # 比较时是否转换为小写
+  threshold: 60    # 相关度阈值（0-100），相关度低于该值的文章不会被推荐
+  toLower: false    # 是否将索引中的关键字全都转换为小写
   indices:    # 用于计算相关度的索引
   - name: tags    # 按标签匹配
     weight: 100    # 标签的权重
   - name: categories    # 按分类匹配
     weight: 200    # 分类的权重（权重越高影响越大）
+
+# Markdown 渲染配置
+markup:
+  # Goldmark 解析器配置（Hugo 默认的 Markdown 解析器）
+  goldmark:
+    extensions:    # 扩展功能
+      passthrough:    # 直通模式：允许特定内容不被 Markdown 解析
+        enable: true    # 启用直通模式（用于支持数学公式）
+        delimiters:    # 定义直通内容的分隔符
+          block:    # 块级元素分隔符（独立成段）
+          - - \[    # LaTeX 块级公式：\[ 公式内容 \]
+            - \]
+          - - $$    # 另一种块级公式：$$ 公式内容 $$
+            - $$
+          inline:    # 行内元素分隔符（段落内）
+          - - \(    # LaTeX 行内公式：\( 公式内容 \)
+            - \)
+    renderer:    # 渲染器配置
+      unsafe: true    # 允许在 Markdown 中使用原始 HTML 标签。注意：设为 true 可能有安全风险，但提供更大灵活性
+
+  # 目录生成配置
+  tableOfContents:
+    startLevel: 2    # 目录起始级别（从 h2 开始，h1 不包含在目录中）
+    endLevel: 4    # 目录结束级别（到 h4 为止）
+    ordered: true    # 使用有序列表（1. 2. 3.）而非无序列表
+
+  # 代码高亮配置
+  highlight:
+    noClasses: false    # 使用 CSS 类名而非内联样式（需配合 CSS 文件）
+    codeFences: true    # 启用代码围栏语法（```语言名）
+    guessSyntax: true    # 未指定语言时自动猜测代码语言
+    lineNos: true    # 显示代码行号
+    lineNoStart: 1    # 行号起始值
+    lineNumbersInTable: true    # 使用表格布局显示行号（便于复制代码时不复制行号）
+    tabWidth: 4    # Tab 键对应的空格数

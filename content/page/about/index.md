@@ -2,8 +2,6 @@
 title: 关于
 slug: "about"
 readingTime: false
-date: '2026-01-18'
-lastmod: '2026-01-19'
 license: CC BY-NC-ND
 ---
 
