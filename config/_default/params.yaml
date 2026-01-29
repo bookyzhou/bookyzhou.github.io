@@ -1,6 +1,6 @@
 # 内容相关配置
 mainSections:    # 在首页列表中显示的内容目录
-- post
+  - post
 featuredImageField: image    # 文章封面图片的字段名
 rssFullContent: true    # RSS 订阅源是否输出全文内容
 favicon: /favicon/favicon.png    # 标签页的站点图标
@@ -11,12 +11,12 @@ footer:
 
 # 日期格式配置
 dateFormat:
-  published: 2006 年 1 月 2 日    # 文章发布日期格式
-  lastUpdated: 2006 年 1 月 2 日 15:04 CST (UTC+8)    # 文章更新日期格式
+  published: "2006 年 1 月 2 日"    # 文章发布日期格式
+  lastUpdated: "2006 年 1 月 2 日 15:04 CST (UTC+8)"    # 文章更新日期格式
 
 # 侧边栏配置
 sidebar:
-  subtitle: 振羽击风，自筑锋芒    # 侧边栏副标题
+  subtitle: "振羽击风，自筑锋芒"    # 侧边栏副标题
   avatar:
     enabled: true    # 是否启用头像
     local: false    # true: 从 assets 目录下根据 src 读取；false: 从 static 目录下根据 src 读取
@@ -30,23 +30,23 @@ article:
   readingTime: true    # 是否显示预计阅读时间
   license:    # 文章版权声明（显示在文章末尾）
     enabled: true    # 是否启用版权声明
-    default: Licensed under CC BY-NC-SA 4.0    # 默认版权协议
+    default: "CC BY-NC-SA 4.0"    # 默认版权协议
 
 # 侧边栏小部件配置
 widgets:
   homepage:    # 首页侧边栏小部件
-  - type: search    # 搜索框
-  - type: archives    # 按年份归档列表
-    params:
-      limit: 5    # 显示最近 5 个年份
-  - type: categories    # 分类列表
-    params:
-      limit: 10    # 最多显示 10 个分类
-  - type: tag-cloud    # 标签云
-    params:
-      limit: 10    # 最多显示 10 个标签
+    - type: search    # 搜索框
+    - type: archives    # 按年份归档列表
+      params:
+        limit: 5    # 显示最近 5 个年份
+    - type: categories    # 分类列表
+      params:
+        limit: 10    # 最多显示 10 个分类
+    - type: tag-cloud    # 标签云
+      params:
+        limit: 10    # 最多显示 10 个标签
   page:    # 文章页侧边栏小部件
-  - type: toc    # 文章目录
+    - type: toc    # 文章目录
 
 # 配色方案配置
 colorScheme:
