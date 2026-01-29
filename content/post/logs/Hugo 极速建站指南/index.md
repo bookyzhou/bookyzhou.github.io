@@ -6,7 +6,7 @@ date: '2026-01-25T01:24:17+08:00'
 lastmod: '2026-01-25T23:40:57+08:00'
 categories: logs
 tags:
-    - Hugo
+    - Hugo 建站基础
 ---
 
 通过这篇指南，你将快速掌握 Hugo 的安装与基本建站流程，轻松搭建属于自己的个人博客。
@@ -300,5 +300,5 @@ git push
 
 ## 参考资料
 
-- [入门指南 | Hugo官方文档](https://hugo.opendocs.io/getting-started/)
+- [入门指南｜Hugo官方文档](https://hugo.opendocs.io/getting-started/)
 - [Getting Started | Stack](https://stack.jimmycai.com/guide/getting-started)
