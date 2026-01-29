@@ -17,40 +17,42 @@ tags:
 
 Hugo 支持 TOML、YAML 和 JSON 三种格式的配置文件。在之前的教程中，我们通过 `hugo new site <你的站点名称> --format yaml` 指令选择了 **YAML** (`hugo.yaml`)。因为它在保持简洁的同时，拥有极佳的可读性，本文也将以 YAML 格式为例进行讲解。
 
-### 单文件 vs 配置目录
+Hugo 提供了两种配置管理方式，你可以根据项目规模和个人偏好进行选择。
 
-Hugo 提供了两种配置管理方式：
+### 单文件配置
 
-1. **单个站点配置文件**：
-    所有的配置都写在根目录下的 `hugo.yaml` 中。例如，配置主题参数 `params`：
+所有的配置都写在根目录下的 `hugo.yaml` 中。例如，配置主题参数 `params`：
 
-    ```yaml
-    # hugo.yaml
-    params:
-      mainSections:
-      - post
-    ```
+```yaml
+# hugo.yaml
+params:
+  mainSections:
+  - post
+```
 
-2. **配置目录（推荐）**：
-    将配置拆分到 `config/_default/` 目录下。例如，创建一个 `params.yaml` 专门存放主题参数：
+这种方式适合配置项较少的简单站点。
 
-    ```yaml
-    # params.yaml
-    mainSections:
-    - post
-    ```
+### 配置目录
 
-    此时，你的目录结构如下：
+将配置拆分到 `config/_default/` 目录下。例如，创建一个 `params.yaml` 专门存放主题参数：
 
-    ```txt
-    .
-    ├── config
-    │   └── _default
-    │       ├── hugo.yaml      # 基础站点配置
-    │       └── params.yaml    # 主题参数配置
-    ```
+```yaml
+# params.yaml
+mainSections:
+- post
+```
 
-Hugo 会自动合并这些文件。这种结构清晰明了，非常利于后期维护。关于配置目录的更多细节，可以参考 [配置目录｜Hugo 官方文档](https://hugo.opendocs.io/getting-started/configuration/#%e9%85%8d%e7%bd%ae%e7%9b%ae%e5%bd%95)。
+此时，你的目录结构如下：
+
+```txt
+.
+├── config
+│   └── _default
+│       ├── hugo.yaml      # 基础站点配置
+│       └── params.yaml    # 主题参数配置
+```
+
+Hugo 会自动合并这些文件。这种结构清晰明了，非常利于后期维护，**强烈推荐使用**。关于配置目录的更多细节，可以参考 [配置目录｜Hugo 官方文档](https://hugo.opendocs.io/getting-started/configuration/#%e9%85%8d%e7%bd%ae%e7%9b%ae%e5%bd%95)。
 
 > **小提示**：在进行配置修改时，建议始终保持 `hugo server` 运行。大多数修改都能实时预览，如果遇到样式错乱或不生效的情况，尝试重启服务或手动删除 `public` 文件夹后重新构建。
 
