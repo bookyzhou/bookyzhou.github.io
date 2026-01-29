@@ -104,7 +104,7 @@ related:
 markup:
   goldmark:
     renderer:
-      unsafe: true # 允许在 Markdown 中直接写 HTML（强烈推荐开启，否则无法嵌入视频或自定义组件）
+      unsafe: true # 允许在 Markdown 中直接写 HTML
     extensions:
       passthrough:
         enable: true # 启用数学公式支持 (LaTeX)
