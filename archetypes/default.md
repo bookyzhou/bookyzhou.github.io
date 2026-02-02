@@ -1,9 +1,10 @@
 ---
 title: '{{ replace .File.ContentBaseName "-" " " | title }}'
 description: 
+img:
 date: '{{ .Date }}'
 lastmod: '{{ .Date }}'
 draft: true
-categories:
+categories: {{ index (split .File.Dir "/") 1 }}
 tags:
 ---

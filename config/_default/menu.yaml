@@ -6,30 +6,34 @@ main:
     weight: 1    # 菜单项排序权重（数字越小越靠前）
     params:
       icon: home
+
   - identifier: Search
     name: 搜索
     url: /search/
     weight: 2
     params:
       icon: search
+
   - identifier: Archives
-    name: 归档
+    name: 文章
     url: /archives/
     weight: 3
     params:
       icon: archives
-  - identifier: About
-    name: 关于
-    url: /about/
-    weight: 4
-    params:
-      icon: user
+
   - identifier: Links
     name: 友链
     url: /links/
-    weight: 5
+    weight: 4
     params:
       icon: link
+
+  - identifier: About
+    name: 关于
+    url: /about/
+    weight: 5
+    params:
+      icon: user
 
 # 社交媒体链接
 social:
@@ -39,24 +43,28 @@ social:
     weight: 1
     params:
       icon: brand-github
+
   - identifier: bilibili
     name: Bilibili
     url: https://space.bilibili.com/629603804
     weight: 2
     params:
       icon: brand-bilibili
+
   - identifier: zhihu
     name: Zhihu
     url: https://www.zhihu.com/people/zhou-yi-heng-88-37
     weight: 3
     params:
       icon: brand-zhihu
+
   - identifier: mail
     name: Mail
     url: mailto:zhouyiheng@mail.ustc.edu.cn
     weight: 4
     params:
       icon: mail
+
   - identifier: rss
     name: RSS
     url: /index.xml
