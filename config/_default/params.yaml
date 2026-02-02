@@ -11,8 +11,8 @@ footer:
 
 # 日期格式配置
 dateFormat:
-  published: "2006 年 1 月 2 日"    # 文章发布日期格式
-  lastUpdated: "2006 年 1 月 2 日 15:04 CST (UTC+8)"    # 文章更新日期格式
+  published: "2006-01-02"    # 文章发布日期格式
+  lastUpdated: "2006-01-02 15:04"    # 文章更新日期格式
 
 # 侧边栏配置
 sidebar:
@@ -28,6 +28,7 @@ article:
   math: false    # 是否启用数学公式支持（需配合 KaTeX 或 MathJax）
   toc: true    # 是否显示文章目录
   readingTime: true    # 是否显示预计阅读时间
+  wordCount: true    # 是否显示字数统计
   license:    # 文章版权声明（显示在文章末尾）
     enabled: true    # 是否启用版权声明
     default: "CC BY-NC-SA 4.0"    # 默认版权协议

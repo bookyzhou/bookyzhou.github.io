@@ -8,6 +8,16 @@ DefaultContentLanguage: zh-cn    # 默认内容语言
 hasCJKLanguage: true    # 是否包含中日韩文字（影响字数统计和摘要生成）
 timeZone: Asia/Shanghai    # 设置时区为上海时间（UTC+8）
 
+# Git 信息配置
+enableGitInfo: true    # 启用 Git 信息（需要完整的 Git 历史记录）
+
+# Front Matter 配置
+frontmatter:
+  lastmod:    # 文章最后修改时间的获取顺序
+    - ":git"
+    - "lastmod"
+    - "date"
+
 # 分页配置
 pagination:
   pagerSize: 5    # 列表页每页显示的文章数量

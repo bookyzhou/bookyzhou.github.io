@@ -1,0 +1,14 @@
+/* 调整 icon 和文本之间的间距 */
+.article-time,
+.article-translations {
+    gap: 20px;
+
+    span {
+        font-size: 1.4rem;
+        color: var(--card-text-color-tertiary);
+    }
+
+    & > div {
+        gap: 5px;
+    }
+}
