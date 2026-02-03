@@ -167,7 +167,7 @@ sidebar:
   subtitle: "Stay Hungry, Stay Foolish" # 头像下方的副标题
   avatar:
     enabled: true
-    local: true      # true: 使用本地图片; false: 使用外链
+    local: true      # 使用本地图片/使用外链
     src: /img/avatar.png # 头像路径 (需存放在 static/img/avatar.png)
 
 # --- 文章页面 ---
