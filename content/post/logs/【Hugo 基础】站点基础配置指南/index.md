@@ -1,12 +1,12 @@
 ---
-title: Hugo 配置指南
-description: 手把手教你打造个性化博客
-image: cover.png
+title: 【Hugo 基础】站点基础配置指南
+description: 手把手教你如何调整站点信息、定制主题参数、管理导航菜单以及创建特殊页面
+# image: cover.png
 date: '2026-01-28T10:30:21+08:00'
 lastmod: '2026-01-29T16:31:53+08:00'
 categories: logs
 tags:
-    - Hugo 建站基础
+    - Hugo 基础
 ---
 
 本文将带你深入了解 Hugo 的配置系统。我们将以 **Stack** 主题为例，手把手教你如何调整站点信息、定制主题参数、管理导航菜单以及创建特殊页面。

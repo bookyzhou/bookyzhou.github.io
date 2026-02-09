@@ -1,12 +1,12 @@
 ---
-title: Hugo 极速建站指南
+title: 【Hugo 基础】极速建站指南
 description: 从零搭建个人博客并部署上线
-image: cover.png
+# image: cover.png
 date: '2026-01-25T01:24:17+08:00'
 lastmod: '2026-01-25T23:40:57+08:00'
 categories: logs
 tags:
-    - Hugo 建站基础
+    - Hugo 基础
 ---
 
 通过这篇指南，你将快速掌握 Hugo 的安装与基本建站流程，轻松搭建属于自己的个人博客。
