@@ -43,7 +43,7 @@
             <div>
                 {{ partial "helper/icon" "edit" }}
                 <time class="article-time--lastmod" datetime='{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}'>
-                    {{ T "article.lastUpdatedOn" }} {{- .Lastmod | time.Format ( or .Site.Params.dateFormat.lastUpdated "Jan 02, 2006 15:04 MST") -}}
+                    {{ T "article.lastUpdatedOn" }} {{- .Lastmod | time.Format (or .Site.Params.dateFormat.lastUpdated "Jan 02, 2006 15:04 MST") -}}
                 </time>
             </div>
         {{ end }}
@@ -65,13 +65,6 @@
                 </time>
             </div>
         {{ end }}
-
-        <div>
-            {{ partial "helper/icon" "eye" }}
-            <span id="busuanzi_container_page_pv" class="article-time--reading">
-                阅读量 <span id="busuanzi_value_page_pv"></span> 次
-            </span>
-        </div>
     </footer>
     {{ end }}
 
