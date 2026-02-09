@@ -192,7 +192,7 @@ git push --set-upstream origin main
 2. 在左侧侧边栏中，向下滚动并找到并点击 `Pages`。
 3. 在 `Build and deployment` 部分，将 `Source` 选项从 `Deploy from a branch` 改为 `GitHub Actions`。
 
-![Github Pages Settings](pic1.png)
+![Github Pages Settings](github_pages_settings.png)
 
 ### 新增 GitHub Actions 部署工作流文件
 
@@ -294,7 +294,7 @@ git push
 
 推送成功后，进入 GitHub 仓库的 `Actions` 标签页。你会看到名为 "Deploy Hugo site to Pages" 的工作流正在运行。点击它可查看执行进度和日志。
 
-![Github Pages Actions](pic2.png)
+![Github Pages Actions](github_pages_actions.png)
 
 工作流完成后，通常需等待几分钟（GitHub Pages 部署可能有延迟），你的博客即可通过 `https://你的用户名.github.io` 访问！
 
