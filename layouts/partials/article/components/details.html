@@ -51,9 +51,9 @@
         {{ if $showWordCount }}
             <div>
                 {{ partial "helper/icon" "file-description" }}
-                <span class="article-time--wordcount">
+                <time class="article-time--wordcount">
                     {{ T "article.wordCount" .WordCount }}
-                </span>
+                </time>
             </div>
         {{ end }}
 

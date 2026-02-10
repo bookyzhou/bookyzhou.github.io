@@ -1,12 +1,6 @@
-/* 调整 icon 和文本之间的间距 */
-.article-time,
-.article-translations {
+/* 优化文章元信息的布局 */
+.article-time {
     gap: 20px;
-
-    span {
-        font-size: 1.4rem;
-        color: var(--card-text-color-tertiary);
-    }
 
     & > div {
         gap: 5px;
