@@ -3,7 +3,6 @@ title: 【Hugo 进阶】文章更新时间自动同步 Git 信息
 description: 基于 Git 提交记录，自动同步并展示文章最后更新时间
 date: '2026-02-09T10:03:40+08:00'
 lastmod: '2026-02-09T20:15:27+08:00'
-draft: false
 categories: logs
 tags:
     - Hugo 进阶
@@ -164,5 +163,5 @@ jobs:
 
 ## 参考资料
 
-- [GitInfo｜Hugo官方文档](https://gohugo.io/methods/page/gitinfo/)
+- [GitInfo | Hugo官方文档](https://gohugo.io/methods/page/gitinfo/)
 - [解决Hugo文章路径含中文时无法获取GitInfo的问题](https://ray233.pages.dev/hugo-gitinfo-from-chinese-path-posts/)
