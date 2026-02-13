@@ -1,5 +1,5 @@
 # 站点基础配置
-title: 凌思札记    # 浏览器标签页显示的站点标题
+title: 凛隼的学习笔记    # 浏览器标签页显示的站点标题
 baseURL: https://bookyzhou.github.io/    # 站点发布后的绝对 URL
 copyright: "凛隼的个人博客"    # 版权声明（显示在页脚）
 theme: 'hugo-theme-stack'    # 使用的 Hugo 主题名称

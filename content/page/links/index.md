@@ -11,6 +11,7 @@ links:
     website: https://github.com/CHENszu
     image: img/chenszu.png
 readingTime: false
+wordCount: false
 license: CC BY-NC-ND
 ---
 
