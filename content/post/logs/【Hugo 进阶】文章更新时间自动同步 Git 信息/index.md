@@ -1,6 +1,7 @@
 ---
 title: 【Hugo 进阶】文章更新时间自动同步 Git 信息
 description: 基于 Git 提交记录，自动同步并展示文章最后更新时间
+# image: cover.png
 date: '2026-02-09T10:03:40+08:00'
 lastmod: '2026-02-09T20:15:27+08:00'
 categories: logs

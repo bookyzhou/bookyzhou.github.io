@@ -1,7 +1,7 @@
 ---
 title: '{{ replace .File.ContentBaseName "-" " " | title }}'
 description: 
-# img: cover.png
+# image: cover.png
 date: '{{ .Date }}'
 lastmod: '{{ .Date }}'
 draft: true

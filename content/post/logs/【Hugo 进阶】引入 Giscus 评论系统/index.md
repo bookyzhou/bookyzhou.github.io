@@ -1,7 +1,7 @@
 ---
 title: 【Hugo 进阶】引入 Giscus 评论系统
 description: 手把手教你将 Giscus 评论系统集成到 Hugo 博客
-# img: cover.png
+# image: cover.png
 date: '2026-02-10T14:48:39+08:00'
 lastmod: '2026-02-12T23:33:49+08:00'
 categories: logs
@@ -38,7 +38,7 @@ Giscus 的工作原理非常巧妙：
 
 ### 第一步：准备 GitHub 仓库
 
-你需要一个 **Public** 的 GitHub 仓库来存储评论。建议直接使用博客源码所在的仓库（例如 `bookyzhou.github.io`）。 ## 这里有一点突兀，和下文的衔接不自然
+你需要确保博客源码所在仓库（例如 `bookyzhou.github.io`）是 **Public** 的，并进行相应配置。
 
 1. 进入你的 GitHub 仓库页面。
 2. 点击 **Settings** -> **General**。
