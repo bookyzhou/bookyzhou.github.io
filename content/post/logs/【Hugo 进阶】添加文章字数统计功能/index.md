@@ -2,6 +2,7 @@
 title: 【Hugo 进阶】添加文章字数统计功能
 description: 实现文章字数统计显示，以及个性化展示样式
 # image: cover.png
+slug: hugo-advanced-add-word-count
 date: '2026-02-10T10:39:28+08:00'
 lastmod: '2026-02-10T14:42:33+08:00'
 categories: logs

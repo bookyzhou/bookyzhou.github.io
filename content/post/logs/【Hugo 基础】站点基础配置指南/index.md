@@ -2,6 +2,7 @@
 title: 【Hugo 基础】站点基础配置指南
 description: 手把手教你如何调整站点信息、定制主题参数、管理导航菜单以及创建特殊页面
 # image: cover.png
+slug: hugo-basics-site-configuration-guide
 date: '2026-01-28T10:30:21+08:00'
 lastmod: '2026-01-29T16:31:53+08:00'
 categories: logs

@@ -2,6 +2,7 @@
 title: 【Hugo 基础】极速建站指南
 description: 从零搭建个人博客并部署上线
 # image: cover.png
+slug: hugo-basics-quick-start-guide
 date: '2026-01-25T01:24:17+08:00'
 lastmod: '2026-01-25T23:40:57+08:00'
 categories: logs

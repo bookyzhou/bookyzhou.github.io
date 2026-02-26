@@ -2,6 +2,7 @@
 title: 【Hugo 进阶】引入 Giscus 评论系统
 description: 手把手教你将 Giscus 评论系统集成到 Hugo 博客
 # image: cover.png
+slug: hugo-advanced-integrate-giscus-comments
 date: '2026-02-10T14:48:39+08:00'
 lastmod: '2026-02-12T23:33:49+08:00'
 categories: logs
