@@ -12,7 +12,7 @@ footer:
 # 日期格式配置
 dateFormat:
   published: "2006-01-02"    # 文章发布日期格式
-  lastUpdated: "2006-01-02 15:04"    # 文章更新日期格式
+  lastUpdated: "2006-01-02"    # 文章更新日期格式
 
 # 侧边栏配置
 sidebar:

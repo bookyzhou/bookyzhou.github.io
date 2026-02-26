@@ -26,7 +26,7 @@
     {{ $showWordCount := .Params.wordCount | default (.Site.Params.article.wordCount) }}
     {{ $showReadingTime := .Params.readingTime | default (.Site.Params.article.readingTime) }}
     {{ $showDate := not .Date.IsZero }}
-    {{ $showLastMod := ne .Lastmod .Date}}
+    {{ $showLastMod := not .Lastmod.IsZero}}
     {{ $showFooter := or $showDate $showLastMod $showWordCount $showReadingTime }}
     {{ if $showFooter }}
     <footer class="article-time">
