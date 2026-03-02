@@ -65,6 +65,15 @@
                 </time>
             </div>
         {{ end }}
+
+        {{ if eq .Type "post" }}
+        <div id="viewCount">
+            {{ partial "helper/icon" "eye" }}
+            <time class="article-time--viewcount">
+                {{ T "article.viewCount" (dict "Count" (printf "<span id='vercount_value_page_pv'>%s</span>" (T "article.viewCountLoading"))) | safeHTML }}
+            </time>
+        </div>
+        {{ end }}
     </footer>
     {{ end }}
 

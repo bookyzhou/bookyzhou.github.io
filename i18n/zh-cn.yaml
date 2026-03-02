@@ -33,6 +33,12 @@ article:
     readingTime:
         other: "阅读时长: {{ .Count }} 分钟"
 
+    viewCount:
+        other: "浏览量: {{ .Count }}"
+
+    viewCountLoading:
+        other: "加载中..."
+
 notFound:
     title:
         other: 404 错误
@@ -71,3 +77,12 @@ footer:
 
     designedBy:
         other: 主题 {{ .Theme }} 由 {{ .DesignedBy }} 设计
+
+    siteViewCount:
+        other: "本站总访问量 {{ .Count }} 次"
+
+    siteVisitorCount:
+        other: "本站访客数 {{ .Count }} 人"
+
+    siteRuntime:
+        other: "本站已运行 {{ .Time }}"
