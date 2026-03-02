@@ -1,18 +1,11 @@
 <!-- vercount访问量统计脚本 -->
 <script defer src="https://cn.vercount.one/js"></script>
 
-<script>
-// 判断是否为文章详情页，非文章页隐藏访问量统计
-document.addEventListener('DOMContentLoaded', function() {
-    let viewCounts = document.querySelectorAll("#viewCount");
-    if (viewCounts.length > 0) {
-        // 判断是否为文章页（body包含article-page类）
-        let isArticlePage = document.body.classList.contains('article-page');
-        if (!isArticlePage) {
-            viewCounts.forEach(ele => {
-                ele.style.display = 'none';
-            });
-        }
+{{- if ne .Type "post" -}}
+<style>
+    /* 非文章页直接通过CSS隐藏，零延迟 */
+    #viewCount {
+        display: none !important;
     }
-});
-</script>
+</style>
+{{- end -}}
