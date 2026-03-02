@@ -1,7 +1,7 @@
 # 站点基础配置
 title: 凛隼的学习笔记    # 浏览器标签页显示的站点标题
 baseURL: https://bookyzhou.github.io/    # 站点发布后的绝对 URL
-copyright: "凛隼的个人博客"    # 版权声明（显示在页脚）
+copyright: "凛隼"    # 版权声明（显示在页脚）
 theme: 'hugo-theme-stack'    # 使用的 Hugo 主题名称
 languageCode: zh-cn    # 站点的语言标签
 DefaultContentLanguage: zh-cn    # 默认内容语言

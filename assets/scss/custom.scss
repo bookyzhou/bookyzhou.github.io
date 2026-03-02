@@ -6,3 +6,47 @@
         gap: 5px;
     }
 }
+
+/* 隐藏 footer 顶部的装饰线 */
+footer.site-footer:before {
+    display: none !important;
+}
+
+/* Footer 样式优化 */
+.site-footer {
+    .footer-section {
+        text-align: center;
+        font-size: 1.1em;
+        line-height: 1.8;
+        margin: 0;
+        
+        p {
+            margin: 0.5em 0;
+        }
+    }
+    
+    .powerby {
+        padding: 0;
+        border: none;
+        
+        .site-stats {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0.5em;
+            
+            .stat-item {
+                white-space: nowrap;
+            }
+            
+            .stat-divider {
+                margin: 0 0.5em;
+            }
+        }
+        
+        .site-runtime {
+            margin-top: 0.5em;
+        }
+    }
+}

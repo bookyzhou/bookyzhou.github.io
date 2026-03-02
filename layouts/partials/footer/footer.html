@@ -1,0 +1,102 @@
+{{- $ThemeVersion := "3.33.0" -}}
+{{- $siteStartDate := .Site.Params.footer.since | default (now.Format "2006") -}}
+<footer class="site-footer">
+    <section class="copyright footer-section">
+        <p>
+            &copy; 
+            {{- if and (.Site.Params.footer.since) (ne .Site.Params.footer.since (int (now.Format "2006"))) -}}
+                {{ .Site.Params.footer.since }} - 
+            {{- end -}}
+            {{ now.Format "2006" }} {{ default .Site.Title .Site.Copyright }}
+            {{- $Generator := ` 使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a>` -}}
+            {{- $Theme := printf ` & <a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="%s">Stack</a> 构建` $ThemeVersion -}}
+            {{- $Generator | safeHTML }}{{ $Theme | safeHTML -}}
+        </p>
+    </section>
+
+    <section class="powerby footer-section" role="contentinfo" aria-label="网站统计信息">
+        <div class="site-stats">
+            <span id="vercount_container_site_pv" class="stat-item">
+                {{ T "footer.siteViewCount" (dict "Count" "<span id='vercount_value_site_pv' aria-live='polite'>0</span>") | safeHTML }}
+            </span>
+            <span class="stat-divider" aria-hidden="true">|</span>
+            <span id="vercount_container_site_uv" class="stat-item">
+                {{ T "footer.siteVisitorCount" (dict "Count" "<span id='vercount_value_site_uv' aria-live='polite'>0</span>") | safeHTML }}
+            </span>
+        </div>
+        <div class="site-runtime">
+            <span id="site_runtime_container">
+                {{ T "footer.siteRuntime" (dict "Time" "<span id='overTime' aria-live='polite'>加载中...</span>") | safeHTML }}
+            </span>
+        </div>
+    </section>
+    
+    <script>
+    (function() {
+        'use strict';
+        
+        const SITE_START_DATE = new Date("{{ $siteStartDate }}-01-19T00:00:00");
+        const UPDATE_INTERVAL = 1000;
+        const MS_PER_SECOND = 1000;
+        const MS_PER_MINUTE = MS_PER_SECOND * 60;
+        const MS_PER_HOUR = MS_PER_MINUTE * 60;
+        const MS_PER_DAY = MS_PER_HOUR * 24;
+        
+        let intervalId = null;
+        
+        function updateTime() {
+            const now = new Date();
+            const diff = now - SITE_START_DATE;
+            
+            if (diff <= 0) {
+                return;
+            }
+            
+            const days = Math.floor(diff / MS_PER_DAY);
+            const hours = Math.floor((diff % MS_PER_DAY) / MS_PER_HOUR);
+            const minutes = Math.floor((diff % MS_PER_HOUR) / MS_PER_MINUTE);
+            const seconds = Math.floor((diff % MS_PER_MINUTE) / MS_PER_SECOND);
+            
+            const timeString = `${days}天 ${hours}时 ${minutes}分 ${seconds}秒`;
+            const overTimeElement = document.getElementById("overTime");
+            
+            if (overTimeElement) {
+                overTimeElement.textContent = timeString;
+            }
+        }
+        
+        function startTimer() {
+            updateTime();
+            intervalId = setInterval(updateTime, UPDATE_INTERVAL);
+        }
+        
+        function stopTimer() {
+            if (intervalId) {
+                clearInterval(intervalId);
+                intervalId = null;
+            }
+        }
+        
+        // 页面可见性 API - 当页面不可见时停止更新
+        if (typeof document.hidden !== "undefined") {
+            document.addEventListener("visibilitychange", function() {
+                if (document.hidden) {
+                    stopTimer();
+                } else {
+                    startTimer();
+                }
+            });
+        }
+        
+        // 初始化
+        if (document.readyState === "loading") {
+            document.addEventListener("DOMContentLoaded", startTimer);
+        } else {
+            startTimer();
+        }
+        
+        // 页面卸载时清理定时器
+        window.addEventListener("beforeunload", stopTimer);
+    })();
+    </script>
+</footer>
