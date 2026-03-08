@@ -84,5 +84,8 @@ footer:
     siteVisitorCount:
         other: "本站访客数 {{ .Count }} 人"
 
+    todayVisitorCount:
+        other: "今日访问量 {{ .Count }} 次"
+
     siteRuntime:
         other: "本站已运行 {{ .Time }}"

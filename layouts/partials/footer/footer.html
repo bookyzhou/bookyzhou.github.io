@@ -16,12 +16,16 @@
 
     <section class="powerby footer-section" role="contentinfo" aria-label="网站统计信息">
         <div class="site-stats">
-            <span id="vercount_container_site_pv" class="stat-item">
-                {{ T "footer.siteViewCount" (dict "Count" "<span id='vercount_value_site_pv' aria-live='polite'>0</span>") | safeHTML }}
+            <span id="qiushaocloud_sitecounter_container_site_pv" class="stat-item">
+                {{ T "footer.siteViewCount" (dict "Count" "<span id='qiushaocloud_sitecounter_value_site_pv' aria-live='polite'>0</span>") | safeHTML }}
             </span>
             <span class="stat-divider" aria-hidden="true">|</span>
-            <span id="vercount_container_site_uv" class="stat-item">
-                {{ T "footer.siteVisitorCount" (dict "Count" "<span id='vercount_value_site_uv' aria-live='polite'>0</span>") | safeHTML }}
+            <span id="qiushaocloud_sitecounter_container_today_site_uv" class="stat-item">
+                {{ T "footer.todayVisitorCount" (dict "Count" "<span id='qiushaocloud_sitecounter_value_today_site_pv' aria-live='polite'>0</span>") | safeHTML }}
+            </span>
+            <span class="stat-divider" aria-hidden="true">|</span>
+            <span id="qiushaocloud_sitecounter_container_site_uv" class="stat-item">
+                {{ T "footer.siteVisitorCount" (dict "Count" "<span id='qiushaocloud_sitecounter_value_site_uv' aria-live='polite'>0</span>") | safeHTML }}
             </span>
         </div>
         <div class="site-runtime">
